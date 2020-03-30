@@ -71,56 +71,56 @@ class Form extends Component {
 
                 <div>
                     <label>Имя персонажа </label>
-                    <input type="text" placeholder="Введите значение" state_key="characterName" value={this.state.characterName} onChange={this.handleChange} />
+                    <input type="text" state_key="characterName" value={this.state.characterName} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Класс </label>
-                    <input type="text" placeholder="Введите значение" state_key="class" value={this.state.class} onChange={this.handleChange} />
+                    <input type="text" state_key="class" value={this.state.class} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Уровень </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="level" value={this.state.level} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="level" value={this.state.level} onChange={this.handleChange} />
                 </div>
 
 
                 <div><label>Предыстория </label>
-                    <input type="text" placeholder="Введите значение" state_key="background" value={this.state.background} onChange={this.handleChange} />
+                    <input type="text" state_key="background" value={this.state.background} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Имя игрока </label>
-                    <input type="text" placeholder="Введите значение" state_key="playerName" value={this.state.playerName} onChange={this.handleChange} />
+                    <input type="text" state_key="playerName" value={this.state.playerName} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Раса </label>
-                    <input type="text" placeholder="Введите значение" state_key="rase" value={this.state.race} onChange={this.handleChange} />
+                    <input type="text" state_key="rase" value={this.state.race} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Мировоззрение </label>
-                    <input type="text" placeholder="Введите значение" state_key="ideology" value={this.state.ideology} onChange={this.handleChange} />
+                    <input type="text" state_key="ideology" value={this.state.ideology} onChange={this.handleChange} />
                 </div>
 
 
 
                 <div>
                     <label>Бонус мастерства </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="masteryBonus" value={this.state.masteryBonus} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="masteryBonus" value={this.state.masteryBonus} onChange={this.handleChange} />
                 </div>
 
 
 
                 <div>
                     <label>Сила </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="strength" value={this.state.strength} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="strength" value={this.state.strength} onChange={this.handleChange} />
                 </div>
 
                 <div>
@@ -135,7 +135,7 @@ class Form extends Component {
 
                 <div>
                     <label>Ловкость </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="dexterity" value={this.state.dexterity} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="dexterity" value={this.state.dexterity} onChange={this.handleChange} />
                 </div>
 
                 <div>
@@ -156,7 +156,7 @@ class Form extends Component {
 
                 <div>
                     <label>Телосожение </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="construction" value={this.state.construction} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="construction" value={this.state.construction} onChange={this.handleChange} />
                 </div>
 
                 <div>
@@ -168,7 +168,7 @@ class Form extends Component {
 
                 <div>
                     <label>Интеллект </label>
-                    <input type="number" min="0" placeholder="Введите значение" value={this.state.intelligence} onChange={this.handleChange} />
+                    <input type="number" min="0" value={this.state.intelligence} onChange={this.handleChange} />
                 </div>
 
                 <div>
@@ -195,7 +195,7 @@ class Form extends Component {
 
                 <div>
                     <label>Мудрость </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="wisdom" value={this.state.wisdom} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="wisdom" value={this.state.wisdom} onChange={this.handleChange} />
                 </div>
 
                 <div>
@@ -222,7 +222,7 @@ class Form extends Component {
 
                 <div>
                     <label>Харизма </label>
-                    <input type="number" min="0" placeholder="Введите значение" state_key="charisma" value={this.state.charisma} onChange={this.handleChange} />
+                    <input type="number" min="0" state_key="charisma" value={this.state.charisma} onChange={this.handleChange} />
                 </div>
 
                 <div>
