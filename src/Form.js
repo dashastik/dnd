@@ -126,10 +126,10 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" stateKey="strengthSave" checked={this.state.strengthSave} onClick={this.handleChange} />Спасбросок
+                        <input type="checkbox" stateKey="strengthSave" checked={this.state.strengthSave} onChange={this.handleChange} />Спасбросок
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="athletics" checked={this.state.athletics} onClick={this.handleChange} />Атлетика
+                        <input type="checkbox" stateKey="athletics" checked={this.state.athletics} onChange={this.handleChange} />Атлетика
                 </label>
                 </div>
 
@@ -144,13 +144,13 @@ class Form extends Component {
                         <input type="checkbox" stateKey="dexteritySave" checked={this.state.dexteritySave} onChange={this.handleChange} />Спасбросок
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="acrobatics" checked={this.state.acrobatics} onClick={this.handleChange} />Акробатика
+                        <input type="checkbox" stateKey="acrobatics" checked={this.state.acrobatics} onChange={this.handleChange} />Акробатика
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="sleightOfHand" checked={this.state.sleightOfHand} onClick={this.handleChange} />Ловкость рук
+                        <input type="checkbox" stateKey="sleightOfHand" checked={this.state.sleightOfHand} onChange={this.handleChange} />Ловкость рук
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="stealth" checked={this.state.stealth} onClick={this.handleChange} />Скрытность
+                        <input type="checkbox" stateKey="stealth" checked={this.state.stealth} onChange={this.handleChange} />Скрытность
                 </label>
                 </div>
 
@@ -162,7 +162,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" stateKey="constructionSave" checked={this.state.constructionSave} onClick={this.handleChange} />Спасбросок
+                        <input type="checkbox" stateKey="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок
                 </label>
                 </div>
 
@@ -174,22 +174,22 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" stateKey="intelligenceSave" checked={this.state.intelligenceSave} onClick={this.handleChange} />Спасбросок
+                        <input type="checkbox" stateKey="intelligenceSave" checked={this.state.intelligenceSave} onChange={this.handleChange} />Спасбросок
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="investigation" checked={this.state.investigation} onClick={this.handleChange} />Анализ
+                        <input type="checkbox" stateKey="investigation" checked={this.state.investigation} onChange={this.handleChange} />Анализ
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="history" checked={this.state.history} onClick={this.handleChange} />История
+                        <input type="checkbox" stateKey="history" checked={this.state.history} onChange={this.handleChange} />История
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="arcana" checked={this.state.arcana} onClick={this.handleChange} />Магия
+                        <input type="checkbox" stateKey="arcana" checked={this.state.arcana} onChange={this.handleChange} />Магия
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="nature" checked={this.state.nature} onClick={this.handleChange} />Природа
+                        <input type="checkbox" stateKey="nature" checked={this.state.nature} onChange={this.handleChange} />Природа
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="religion" checked={this.state.religion} onClick={this.handleChange} />Религия
+                        <input type="checkbox" stateKey="religion" checked={this.state.religion} onChange={this.handleChange} />Религия
                 </label>
                 </div>
 
@@ -201,22 +201,22 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" stateKey="wisdomSave" checked={this.state.wisdomSave} onClick={this.handleChange} />Спасбросок
+                        <input type="checkbox" stateKey="wisdomSave" checked={this.state.wisdomSave} onChange={this.handleChange} />Спасбросок
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="perception" checked={this.state.perception} onClick={this.handleChange} />Внимательность
+                        <input type="checkbox" stateKey="perception" checked={this.state.perception} onChange={this.handleChange} />Внимательность
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="survival" checked={this.state.survival} onClick={this.handleChange} />Выживание
+                        <input type="checkbox" stateKey="survival" checked={this.state.survival} onChange={this.handleChange} />Выживание
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="medicine" checked={this.state.medicine} onClick={this.handleChange} />Медицина
+                        <input type="checkbox" stateKey="medicine" checked={this.state.medicine} onChange={this.handleChange} />Медицина
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="insight" checked={this.state.insight} onClick={this.handleChange} />Проницательность
+                        <input type="checkbox" stateKey="insight" checked={this.state.insight} onChange={this.handleChange} />Проницательность
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="animalHandling" checked={this.state.animalHandling} onClick={this.handleChange} />Уход за животными
+                        <input type="checkbox" stateKey="animalHandling" checked={this.state.animalHandling} onChange={this.handleChange} />Уход за животными
                 </label>
                 </div>
 
@@ -228,19 +228,19 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" stateKey="charismaSave" checked={this.state.charismaSave} onClick={this.handleChange} />Спасбросок
+                        <input type="checkbox" stateKey="charismaSave" checked={this.state.charismaSave} onChange={this.handleChange} />Спасбросок
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="performance" checked={this.state.performance} onClick={this.handleChange} />Выступление
+                        <input type="checkbox" stateKey="performance" checked={this.state.performance} onChange={this.handleChange} />Выступление
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="intimidation" checked={this.state.intimidation} onClick={this.handleChange} />Запугивание
+                        <input type="checkbox" stateKey="intimidation" checked={this.state.intimidation} onChange={this.handleChange} />Запугивание
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="deception" checked={this.state.deception} onClick={this.handleChange} />Обман
+                        <input type="checkbox" stateKey="deception" checked={this.state.deception} onChange={this.handleChange} />Обман
                 </label>
                     <label>
-                        <input type="checkbox" stateKey="persuasion" checked={this.state.persuasion} onClick={this.handleChange} />Убеждение
+                        <input type="checkbox" stateKey="persuasion" checked={this.state.persuasion} onChange={this.handleChange} />Убеждение
                 </label>
                 </div>
 
