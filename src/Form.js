@@ -125,7 +125,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="strengthSave" checked={this.state.strengthSave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="strengthSave" checked={this.state.strengthSave} onChange={this.handleChange} />Спасбросок по силе
                 </label>
                     <label>
                         <input type="checkbox" state_key="athletics" checked={this.state.athletics} onChange={this.handleChange} />Атлетика
@@ -140,7 +140,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="dexteritySave" checked={this.state.dexteritySave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="dexteritySave" checked={this.state.dexteritySave} onChange={this.handleChange} />Спасбросок по ловкости
                 </label>
                     <label>
                         <input type="checkbox" state_key="acrobatics" checked={this.state.acrobatics} onChange={this.handleChange} />Акробатика
@@ -161,7 +161,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок по телосложению
                 </label>
                 </div>
 
@@ -173,7 +173,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="intelligenceSave" checked={this.state.intelligenceSave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="intelligenceSave" checked={this.state.intelligenceSave} onChange={this.handleChange} />Спасбросок по интелекту
                 </label>
                     <label>
                         <input type="checkbox" state_key="investigation" checked={this.state.investigation} onChange={this.handleChange} />Анализ
@@ -200,7 +200,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="wisdomSave" checked={this.state.wisdomSave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="wisdomSave" checked={this.state.wisdomSave} onChange={this.handleChange} />Спасбросок по мудрости
                 </label>
                     <label>
                         <input type="checkbox" state_key="perception" checked={this.state.perception} onChange={this.handleChange} />Внимательность
@@ -227,7 +227,7 @@ class Form extends Component {
 
                 <div>
                     <label>
-                        <input type="checkbox" state_key="charismaSave" checked={this.state.charismaSave} onChange={this.handleChange} />Спасбросок
+                        <input type="checkbox" state_key="charismaSave" checked={this.state.charismaSave} onChange={this.handleChange} />Спасбросок по харизме
                 </label>
                     <label>
                         <input type="checkbox" state_key="performance" checked={this.state.performance} onChange={this.handleChange} />Выступление
