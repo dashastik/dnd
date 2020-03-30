@@ -72,42 +72,42 @@ class Form extends Component {
 
                 <div>
                     <label>Имя персонажа </label>
-                    <input type="text" placeholder="Киланта" stateKey="characterName" value={this.state.characterName} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="characterName" value={this.state.characterName} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Класс </label>
-                    <input type="text" placeholder="Друид" stateKey="class" value={this.state.class} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="class" value={this.state.class} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Уровень </label>
-                    <input type="number" min="0" placeholder="(3)" stateKey="level" value={this.state.level} onChange={this.handleChange} />
+                    <input type="number" min="0" placeholder="Введите значение" stateKey="level" value={this.state.level} onChange={this.handleChange} />
                 </div>
 
 
                 <div><label>Предыстория </label>
-                    <input type="text" placeholder="Медведь" stateKey="background" value={this.state.background} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="background" value={this.state.background} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Имя игрока </label>
-                    <input type="text" placeholder="Даша" stateKey="playerName" value={this.state.playerName} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="playerName" value={this.state.playerName} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Раса </label>
-                    <input type="text" placeholder="Лесной эльф" stateKey="rase" value={this.state.race} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="rase" value={this.state.race} onChange={this.handleChange} />
                 </div>
 
 
                 <div>
                     <label>Мировоззрение </label>
-                    <input type="text" placeholder="Chaotic good" stateKey="ideology" value={this.state.ideology} onChange={this.handleChange} />
+                    <input type="text" placeholder="Введите значение" stateKey="ideology" value={this.state.ideology} onChange={this.handleChange} />
                 </div>
 
 
