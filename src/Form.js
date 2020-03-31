@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import InputText from './InputText';
 
 class Form extends Component {
 
     state = {
         characterName: '',
         class: '',
-        level: '',
+        level: 0,
         background: '',
         playerName: '',
         race: '',
@@ -50,73 +51,56 @@ class Form extends Component {
 
     }
 
-    handleChange = e => {
-        let key = e.target.getAttribute("state_key");
-        let value = undefined;
-        if (e.target.type === "checkbox") {
-            value = e.target.checked;
-        } else if (e.target.type === "number") {
-            value = Number(e.target.value);
-        } else {
-            value = e.target.value;
-        }
-        let newState = {};
-        newState[key] = value;
-        this.setState(newState);
+    handleChange = (key, value) => this.setState({ [key]: value })
+
+    shouldComponentUpdate() {
+        return false
     }
 
     render() {
         return (
             <div>
+                <InputText
+                    label="Имя персонажа"
+                    stateKey="characterName"
+                    onChange={this.handleChange}
+                />
 
-                <div>
-                    <label>Имя персонажа </label>
-                    <input type="text" state_key="characterName" value={this.state.characterName} onChange={this.handleChange} />
-                </div>
-
-
-                <div>
-                    <label>Класс </label>
-                    <input type="text" state_key="class" value={this.state.class} onChange={this.handleChange} />
-                </div>
-
+                <InputText
+                    label="Класс"
+                    stateKey="class"
+                    onChange={this.handleChange}
+                />
+                <InputText
+                    label="Предыстория"
+                    stateKey="background"
+                    onChange={this.handleChange}
+                />
+                <InputText
+                    label="Имя игрока"
+                    stateKey="playerName"
+                    onChange={this.handleChange}
+                />
+                <InputText
+                    label="Раса"
+                    stateKey="race"
+                    onChange={this.handleChange}
+                />
+                <InputText
+                    label="Мировоззрение"
+                    stateKey="ideology"
+                    onChange={this.handleChange}
+                />
 
                 <div>
                     <label>Уровень </label>
                     <input type="number" min="0" state_key="level" value={this.state.level} onChange={this.handleChange} />
                 </div>
 
-
-                <div><label>Предыстория </label>
-                    <input type="text" state_key="background" value={this.state.background} onChange={this.handleChange} />
-                </div>
-
-
-                <div>
-                    <label>Имя игрока </label>
-                    <input type="text" state_key="playerName" value={this.state.playerName} onChange={this.handleChange} />
-                </div>
-
-
-                <div>
-                    <label>Раса </label>
-                    <input type="text" state_key="rase" value={this.state.race} onChange={this.handleChange} />
-                </div>
-
-
-                <div>
-                    <label>Мировоззрение </label>
-                    <input type="text" state_key="ideology" value={this.state.ideology} onChange={this.handleChange} />
-                </div>
-
-
-
                 <div>
                     <label>Бонус мастерства </label>
                     <input type="number" min="0" state_key="masteryBonus" value={this.state.masteryBonus} onChange={this.handleChange} />
                 </div>
-
-
 
                 <div>
                     <label>Сила </label>
@@ -131,7 +115,6 @@ class Form extends Component {
                         <input type="checkbox" state_key="athletics" checked={this.state.athletics} onChange={this.handleChange} />Атлетика
                 </label>
                 </div>
-
 
                 <div>
                     <label>Ловкость </label>
@@ -153,7 +136,6 @@ class Form extends Component {
                 </label>
                 </div>
 
-
                 <div>
                     <label>Телосожение </label>
                     <input type="number" min="0" state_key="construction" value={this.state.construction} onChange={this.handleChange} />
@@ -164,7 +146,6 @@ class Form extends Component {
                         <input type="checkbox" state_key="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок по телосложению
                 </label>
                 </div>
-
 
                 <div>
                     <label>Интеллект </label>
@@ -192,7 +173,6 @@ class Form extends Component {
                 </label>
                 </div>
 
-
                 <div>
                     <label>Мудрость </label>
                     <input type="number" min="0" state_key="wisdom" value={this.state.wisdom} onChange={this.handleChange} />
@@ -219,7 +199,6 @@ class Form extends Component {
                 </label>
                 </div>
 
-
                 <div>
                     <label>Харизма </label>
                     <input type="number" min="0" state_key="charisma" value={this.state.charisma} onChange={this.handleChange} />
@@ -243,12 +222,9 @@ class Form extends Component {
                 </label>
                 </div>
 
-
-                <button >
+                <button onClick={() => console.log(this.state)} >
                     Создать лист персонажа
                 </button>
-
-
 
             </div >
         )
