@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InputText from './InputText';
 import InputNumber from './InputNumber';
+import InputCheckbox from './InputCheckbox';
 
 class Form extends Component {
 
@@ -106,125 +107,151 @@ class Form extends Component {
                     stateKey="strength"
                     onChange={this.handleChange}
                 />
-               
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="strengthSave" checked={this.state.strengthSave} onChange={this.handleChange} />Спасбросок по силе
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="athletics" checked={this.state.athletics} onChange={this.handleChange} />Атлетика
-                </label>
-                </div>
-
+               <InputCheckbox
+                    label="Спасбросок по силе"
+                    stateKey="strengthSave"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Атлетика"
+                    stateKey="athletics"
+                    onChange={this.handleChange}
+                />
                 <InputNumber
                     label="Ловкость"
                     stateKey="dexterity"
                     onChange={this.handleChange}
                 />
-              
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="dexteritySave" checked={this.state.dexteritySave} onChange={this.handleChange} />Спасбросок по ловкости
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="acrobatics" checked={this.state.acrobatics} onChange={this.handleChange} />Акробатика
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="sleightOfHand" checked={this.state.sleightOfHand} onChange={this.handleChange} />Ловкость рук
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="stealth" checked={this.state.stealth} onChange={this.handleChange} />Скрытность
-                </label>
-                </div>
+                <InputCheckbox
+                    label="Спасбросок по ловкости"
+                    stateKey="dexteritySave"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Акробатика"
+                    stateKey="acrobatics"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Ловкость рук"
+                    stateKey="sleightOfHand"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Скрытность"
+                    stateKey="stealth"
+                    onChange={this.handleChange}
+                />
                 <InputNumber
                     label="Телосожение"
                     stateKey="construction"
                     onChange={this.handleChange}
                 />
-
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок по телосложению
-                </label>
-                </div>
+                <InputCheckbox
+                    label="Спасбросок по телосложению"
+                    stateKey="constructionSave"
+                    onChange={this.handleChange}
+                />
                 <InputNumber
                     label="Интеллект"
                     stateKey="intelligence"
                     onChange={this.handleChange}
                 />
-
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="intelligenceSave" checked={this.state.intelligenceSave} onChange={this.handleChange} />Спасбросок по интелекту
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="investigation" checked={this.state.investigation} onChange={this.handleChange} />Анализ
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="history" checked={this.state.history} onChange={this.handleChange} />История
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="arcana" checked={this.state.arcana} onChange={this.handleChange} />Магия
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="nature" checked={this.state.nature} onChange={this.handleChange} />Природа
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="religion" checked={this.state.religion} onChange={this.handleChange} />Религия
-                </label>
-                </div>
-
+                <InputCheckbox
+                    label="Спасбросок по интелекту"
+                    stateKey="intelligenceSave"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Анализ"
+                    stateKey="investigation"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="История"
+                    stateKey="history"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Магия"
+                    stateKey="arcana"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Природа"
+                    stateKey="nature"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Религия"
+                    stateKey="religion"
+                    onChange={this.handleChange}
+                />
                 <InputNumber
                     label="Мудрость"
                     stateKey="wisdom"
                     onChange={this.handleChange}
                 />
-
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="wisdomSave" checked={this.state.wisdomSave} onChange={this.handleChange} />Спасбросок по мудрости
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="perception" checked={this.state.perception} onChange={this.handleChange} />Внимательность
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="survival" checked={this.state.survival} onChange={this.handleChange} />Выживание
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="medicine" checked={this.state.medicine} onChange={this.handleChange} />Медицина
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="insight" checked={this.state.insight} onChange={this.handleChange} />Проницательность
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="animalHandling" checked={this.state.animalHandling} onChange={this.handleChange} />Уход за животными
-                </label>
-                </div>
-
+                <InputCheckbox
+                    label="Спасбросок по мудрости"
+                    stateKey="wisdomSave"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Внимательность"
+                    stateKey="perception"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Выживание"
+                    stateKey="survival"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Медицина"
+                    stateKey="medicine"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Проницательность"
+                    stateKey="insight"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Уход за животными"
+                    stateKey="animalHandling"
+                    onChange={this.handleChange}
+                />
                 <InputNumber
                     label="Харизма"
                     stateKey="charisma"
                     onChange={this.handleChange}
                 />
-
-                <div>
-                    <label>
-                        <input type="checkbox" state_key="charismaSave" checked={this.state.charismaSave} onChange={this.handleChange} />Спасбросок по харизме
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="performance" checked={this.state.performance} onChange={this.handleChange} />Выступление
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="intimidation" checked={this.state.intimidation} onChange={this.handleChange} />Запугивание
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="deception" checked={this.state.deception} onChange={this.handleChange} />Обман
-                </label>
-                    <label>
-                        <input type="checkbox" state_key="persuasion" checked={this.state.persuasion} onChange={this.handleChange} />Убеждение
-                </label>
-                </div>
-
+                <InputCheckbox
+                    label="Спасбросок по харизме"
+                    stateKey="charismaSave"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Выступление"
+                    stateKey="performance"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Запугивание"
+                    stateKey="intimidation"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Обман"
+                    stateKey="deception"
+                    onChange={this.handleChange}
+                />
+                <InputCheckbox
+                    label="Убеждение"
+                    stateKey="persuasion"
+                    onChange={this.handleChange}
+                />
                 <button onClick={() => console.log(this.state)} >
                     Создать лист персонажа
                 </button>
