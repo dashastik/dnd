@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InputText from './InputText';
+import InputNumber from './InputNumber';
 
 class Form extends Component {
 
@@ -65,10 +66,14 @@ class Form extends Component {
                     stateKey="characterName"
                     onChange={this.handleChange}
                 />
-
                 <InputText
                     label="Класс"
                     stateKey="class"
+                    onChange={this.handleChange}
+                />
+                <InputNumber
+                    label="Уровень"
+                    stateKey="level"
                     onChange={this.handleChange}
                 />
                 <InputText
@@ -91,22 +96,17 @@ class Form extends Component {
                     stateKey="ideology"
                     onChange={this.handleChange}
                 />
-
-                <div>
-                    <label>Уровень </label>
-                    <input type="number" min="0" state_key="level" value={this.state.level} onChange={this.handleChange} />
-                </div>
-
-                <div>
-                    <label>Бонус мастерства </label>
-                    <input type="number" min="0" state_key="masteryBonus" value={this.state.masteryBonus} onChange={this.handleChange} />
-                </div>
-
-                <div>
-                    <label>Сила </label>
-                    <input type="number" min="0" state_key="strength" value={this.state.strength} onChange={this.handleChange} />
-                </div>
-
+                <InputNumber
+                    label="Бонус мастерства"
+                    stateKey="masteryBonus"
+                    onChange={this.handleChange}
+                />
+                <InputNumber
+                    label="Сила"
+                    stateKey="strength"
+                    onChange={this.handleChange}
+                />
+               
                 <div>
                     <label>
                         <input type="checkbox" state_key="strengthSave" checked={this.state.strengthSave} onChange={this.handleChange} />Спасбросок по силе
@@ -116,11 +116,12 @@ class Form extends Component {
                 </label>
                 </div>
 
-                <div>
-                    <label>Ловкость </label>
-                    <input type="number" min="0" state_key="dexterity" value={this.state.dexterity} onChange={this.handleChange} />
-                </div>
-
+                <InputNumber
+                    label="Ловкость"
+                    stateKey="dexterity"
+                    onChange={this.handleChange}
+                />
+              
                 <div>
                     <label>
                         <input type="checkbox" state_key="dexteritySave" checked={this.state.dexteritySave} onChange={this.handleChange} />Спасбросок по ловкости
@@ -135,22 +136,22 @@ class Form extends Component {
                         <input type="checkbox" state_key="stealth" checked={this.state.stealth} onChange={this.handleChange} />Скрытность
                 </label>
                 </div>
-
-                <div>
-                    <label>Телосожение </label>
-                    <input type="number" min="0" state_key="construction" value={this.state.construction} onChange={this.handleChange} />
-                </div>
+                <InputNumber
+                    label="Телосожение"
+                    stateKey="construction"
+                    onChange={this.handleChange}
+                />
 
                 <div>
                     <label>
                         <input type="checkbox" state_key="constructionSave" checked={this.state.constructionSave} onChange={this.handleChange} />Спасбросок по телосложению
                 </label>
                 </div>
-
-                <div>
-                    <label>Интеллект </label>
-                    <input type="number" min="0" value={this.state.intelligence} onChange={this.handleChange} />
-                </div>
+                <InputNumber
+                    label="Интеллект"
+                    stateKey="intelligence"
+                    onChange={this.handleChange}
+                />
 
                 <div>
                     <label>
@@ -173,10 +174,11 @@ class Form extends Component {
                 </label>
                 </div>
 
-                <div>
-                    <label>Мудрость </label>
-                    <input type="number" min="0" state_key="wisdom" value={this.state.wisdom} onChange={this.handleChange} />
-                </div>
+                <InputNumber
+                    label="Мудрость"
+                    stateKey="wisdom"
+                    onChange={this.handleChange}
+                />
 
                 <div>
                     <label>
@@ -199,10 +201,11 @@ class Form extends Component {
                 </label>
                 </div>
 
-                <div>
-                    <label>Харизма </label>
-                    <input type="number" min="0" state_key="charisma" value={this.state.charisma} onChange={this.handleChange} />
-                </div>
+                <InputNumber
+                    label="Харизма"
+                    stateKey="charisma"
+                    onChange={this.handleChange}
+                />
 
                 <div>
                     <label>
