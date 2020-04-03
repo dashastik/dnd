@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import changeCharacter from './action';
 
 class InputCheckbox extends Component {
 
-    state = { value: false }
-
-    handleChange = e => this.setState({ value: e.target.checked })
-
-    componentDidUpdate() {
-        this.props.onChange(this.props.stateKey, this.state.value)
+    handleChange = e => {
+        const action = changeCharacter(this.props.stateKey, e.target.checked)
+        this.props.dispatch(action)
     }
 
     render() {
         return (
             <div>
                 <label>
-                <input
-                    type="checkbox"
-                    checked={this.state.value}
-                    onChange={this.handleChange}
-                />
-                {this.props.label}
+                    <input
+                        type="checkbox"
+                        checked={this.props.store[this.props.stateKey]}
+                        onChange={this.handleChange}
+                    />
+                    {this.props.label}
                 </label>
             </div>
         )
     }
 }
 
-export default InputCheckbox;
+const mapStateToProps = (state) => {
+    return { store: state }
+}
+
+export default connect(mapStateToProps)(InputCheckbox);
