@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import changeCharacter from './action';
 
 class InputNumber extends Component {
 
-    state = { value: '' }
-
-    handleChange = e => this.setState({ value: Number(e.target.value) })
-
-    componentDidUpdate() {
-        this.props.onChange(this.props.stateKey, this.state.value)
+    handleChange = e => {
+        const action = changeCharacter(this.props.stateKey, Number(e.target.value))
+        this.props.dispatch(action)
     }
 
     render() {
@@ -17,7 +16,7 @@ class InputNumber extends Component {
                 <input
                     type="number"
                     min="0"
-                    value={this.state.value}
+                    value={this.props.store[this.props.stateKey]}
                     onChange={this.handleChange}
                 />
             </div>
@@ -25,4 +24,8 @@ class InputNumber extends Component {
     }
 }
 
-export default InputNumber;
+const mapStateToProps = (state) => {
+    return {store: state}
+}
+
+export default connect(mapStateToProps)(InputNumber);
