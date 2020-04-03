@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import changeCharacter from './action';
 
 class InputText extends Component {
 
-    state = { value: '' }
-
-    handleChange = e => this.setState({ value: e.target.value })
-
-    componentDidUpdate() {
-        this.props.onChange(this.props.stateKey, this.state.value)
+    handleChange = e => {
+        const action = changeCharacter(this.props.stateKey, e.target.value)
+        this.props.dispatch(action)
     }
 
     render() {
@@ -16,7 +15,7 @@ class InputText extends Component {
                 <label>{this.props.label}</label>
                 <input
                     type="text"
-                    value={this.state.value}
+                    value={this.props.store[this.props.stateKey]}
                     onChange={this.handleChange}
                 />
             </div>
@@ -24,4 +23,8 @@ class InputText extends Component {
     }
 }
 
-export default InputText;
+const mapStateToProps = (state) => {
+    return {store: state}
+}
+
+export default connect(mapStateToProps)(InputText);
