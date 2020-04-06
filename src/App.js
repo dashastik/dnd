@@ -1,10 +1,22 @@
 import React from 'react';
-import Form from './Form';
-
+import FormCharacter from './FormCharacter';
+import CardCharacter from './CardCharacter'
+import { Container, Col, Row } from 'react-bootstrap';
 
 function App() {
   return (
-    <Form/>
+    <Container>
+      <Row>
+      <Col lg={6}>
+        <FormCharacter />
+      </Col>
+      <Col lg={6}>
+        <CardCharacter />
+      </Col>
+      </Row>
+
+    </Container>
+
   );
 }
 

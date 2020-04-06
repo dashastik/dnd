@@ -2,47 +2,53 @@ import React, { Component } from 'react';
 import InputText from './InputText';
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
+import { Form } from 'react-bootstrap';
 
-class Form extends Component {
+class FormCharacter extends Component {
     render() {
         return (
-            <div>
+            <Form>
                 <InputText
                     label="Имя персонажа"
                     stateKey="characterName"
                 />
-                <InputText
-                    label="Класс"
-                    stateKey="class"
-                />
-                <InputNumber
-                    label="Уровень"
-                    stateKey="level"
-                />
-                <InputText
-                    label="Предыстория"
-                    stateKey="background"
-                />
-                <InputText
-                    label="Имя игрока"
-                    stateKey="playerName"
-                />
-                <InputText
-                    label="Раса"
-                    stateKey="race"
-                />
-                <InputText
-                    label="Мировоззрение"
-                    stateKey="ideology"
-                />
-                <InputNumber
-                    label="Бонус мастерства"
-                    stateKey="masteryBonus"
-                />
-                <InputNumber
-                    label="Сила"
-                    stateKey="strength"
-                />
+                <Form.Row>
+                    <InputText
+                        label="Класс"
+                        stateKey="class"
+                    />
+                    <InputNumber
+                        label="Уровень"
+                        stateKey="level"
+                    />
+                    <InputText
+                        label="Предыстория"
+                        stateKey="background"
+                    />
+                    <InputText
+                        label="Имя игрока"
+                        stateKey="playerName"
+                    />
+                    <InputText
+                        label="Раса"
+                        stateKey="race"
+                    />
+                    <InputText
+                        label="Мировоззрение"
+                        stateKey="ideology"
+                    />
+
+                    <InputNumber
+                        label="Бонус мастерства"
+                        stateKey="masteryBonus"
+                    />
+                </Form.Row>
+                <Form.Row>
+                    <InputNumber
+                        label="Сила"
+                        stateKey="strength"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по силе"
                     stateKey="strengthSave"
@@ -51,10 +57,12 @@ class Form extends Component {
                     label="Атлетика"
                     stateKey="athletics"
                 />
-                <InputNumber
-                    label="Ловкость"
-                    stateKey="dexterity"
-                />
+                <Form.Row>
+                    <InputNumber
+                        label="Ловкость"
+                        stateKey="dexterity"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по ловкости"
                     stateKey="dexteritySave"
@@ -71,18 +79,22 @@ class Form extends Component {
                     label="Скрытность"
                     stateKey="stealth"
                 />
-                <InputNumber
-                    label="Телосожение"
-                    stateKey="construction"
-                />
+                <Form.Row>
+                    <InputNumber
+                        label="Телосожение"
+                        stateKey="construction"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по телосложению"
                     stateKey="constructionSave"
                 />
-                <InputNumber
-                    label="Интеллект"
-                    stateKey="intelligence"
-                />
+                <Form.Row>
+                    <InputNumber
+                        label="Интеллект"
+                        stateKey="intelligence"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по интелекту"
                     stateKey="intelligenceSave"
@@ -107,10 +119,12 @@ class Form extends Component {
                     label="Религия"
                     stateKey="religion"
                 />
-                <InputNumber
-                    label="Мудрость"
-                    stateKey="wisdom"
-                />
+                <Form.Row>
+                    <InputNumber
+                        label="Мудрость"
+                        stateKey="wisdom"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по мудрости"
                     stateKey="wisdomSave"
@@ -135,10 +149,12 @@ class Form extends Component {
                     label="Уход за животными"
                     stateKey="animalHandling"
                 />
-                <InputNumber
-                    label="Харизма"
-                    stateKey="charisma"
-                />
+                <Form.Row>
+                    <InputNumber
+                        label="Харизма"
+                        stateKey="charisma"
+                    />
+                </Form.Row>
                 <InputCheckbox
                     label="Спасбросок по харизме"
                     stateKey="charismaSave"
@@ -159,9 +175,9 @@ class Form extends Component {
                     label="Убеждение"
                     stateKey="persuasion"
                 />
-            </div>
+            </Form>
         )
     }
 }
 
-export default Form;
+export default FormCharacter;
