@@ -1,49 +1,51 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Attribute from './Attribute';
+import { Card, ListGroupItem } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 class CardCharacter extends Component {
 
     render() {
-        console.log(this.props);
-
         return (
             <div>
-                <div>
-                    Имя персонажа: {this.props.characterName}
-                </div>
-                <div>
-                    Класс: {this.props.class}
-                </div>
-                <div>
-                    Уровень: {this.props.level}
-                </div>
-                <div>
-                    Предыстория: {this.props.background}
-                </div>
-                <div>
-                    Имя игрока: {this.props.playerName}
-                </div>
-                <div>
-                    Раса: {this.props.race}
-                </div>
-                <div>
-                    Мировоззрение: {this.props.ideology}
-                </div>
-                <div>
-                    Бонус мастерства: {this.props.masteryBonus}
-                </div>
-                <div>
-                    Сила: {this.props.strength}
-                </div>
-                <hr />
+                <Card style={{ width: '20rem' }}>
+                    <Card.Header as="h4">Имя персонажа: {this.props.characterName}</Card.Header>
+                    <Card.Body>
+                        <Card.Title  as="h5">Информация о персонаже:</Card.Title>
+                        <ListGroup>
+                            <ListGroupItem>
+                            Класс: {this.props.class}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Уровень: {this.props.level}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Предыстория: {this.props.background}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Имя игрока: {this.props.playerName}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Раса: {this.props.race}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Мировоззрение: {this.props.ideology}
+                            </ListGroupItem>
+                            <ListGroupItem>
+                            Бонус мастерства: {this.props.masteryBonus}
+                            </ListGroupItem>
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+                
                 <Attribute
                     label="Сила"
                     paramKey="strength"
                     paramSave="strengthSave"
                     list={[{ label: "Атлетика", stateKey: "athletics" }]}
                 />
-                <hr />
+                
                 <Attribute
                     label="Ловкость"
                     paramKey="dexterity"
@@ -54,13 +56,13 @@ class CardCharacter extends Component {
                         { label: "Скрытность", stateKey: "stealth" }
                     ]}
                 />
-                <hr />
+                
                 <Attribute
                     label="Телосожение"
                     paramKey="construction"
                     paramSave="constructionSave"
                 />
-                <hr />
+                
                 <Attribute
                     label="Интеллект"
                     paramKey="intelligence"
@@ -73,7 +75,7 @@ class CardCharacter extends Component {
                         { label: "Религия", stateKey: "religion" }
                     ]}
                 />
-                <hr />
+                
                 <Attribute
                     label="Мудрость"
                     paramKey="wisdom"
@@ -86,7 +88,7 @@ class CardCharacter extends Component {
                         { label: "Уход за животными", stateKey: "animalHandling" }
                     ]}
                 />
-                <hr />
+                
                 <Attribute
                     label="Харизма"
                     paramKey="charisma"

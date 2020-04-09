@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Card, ListGroup, ListGroupItem, Form } from 'react-bootstrap';
 
 
 class Attribute extends Component {
@@ -12,19 +13,34 @@ class Attribute extends Component {
         const list = this.props.list
 
         return (
-            <div>
-                <p>Наименование: {this.props.label}</p>
-                <p>Значение: {paramValue} </p>
-                <p>Мoдификатор: {mod} </p>
-                <p>Спасбросок: {isSave ? "да" : "нет"}, {saveValue}</p>
-                <div>
-                    {list.map((item, i) => {
-                        const isCurrent = this.props[item.stateKey]
-                        const currentValue = isCurrent ? mod + masteryBonus : mod
-                        return <p key={i}>{item.label}: {isCurrent ? "да" : "нет"}, {currentValue}</p>
-                    })}
-                </div>
-            </div>
+            <Card style={{ width: '20rem' }}>
+                <Card.Header as="h4">{this.props.label} {paramValue}</Card.Header>
+                <Card.Body>
+                    <Card.Title as="h5"> Мoдификатор: {mod}</Card.Title>
+                    <ListGroup>
+                        <ListGroupItem>
+                            <Form.Check
+                                label={"Спасбросок: " + saveValue}
+                                type="checkbox"
+                                checked={isSave}
+                                readOnly
+                            />
+                        </ListGroupItem>
+                        {list.map((item, i) => {
+                            const isCurrent = this.props[item.stateKey]
+                            const currentValue = isCurrent ? mod + masteryBonus : mod
+                            return <ListGroupItem key={i}>
+                                <Form.Check
+                                    label={item.label + ": " + currentValue}
+                                    type="checkbox"
+                                    checked={isCurrent}
+                                    readOnly
+                                />
+                            </ListGroupItem>
+                        })}
+                    </ListGroup>
+                </Card.Body>
+            </Card>
         )
     }
 }
