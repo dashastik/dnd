@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InputText from './InputText';
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
-import { Form } from 'react-bootstrap';
+import { Form, Card, CardGroup } from 'react-bootstrap';
 
 class FormCharacter extends Component {
     render() {
@@ -43,138 +43,157 @@ class FormCharacter extends Component {
                         stateKey="masteryBonus"
                     />
                 </Form.Row>
-                <Form.Row>
-                    <InputNumber
-                        label="Сила"
-                        stateKey="strength"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по силе"
-                    stateKey="strengthSave"
-                />
-                <InputCheckbox
-                    label="Атлетика"
-                    stateKey="athletics"
-                />
-                <Form.Row>
-                    <InputNumber
-                        label="Ловкость"
-                        stateKey="dexterity"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по ловкости"
-                    stateKey="dexteritySave"
-                />
-                <InputCheckbox
-                    label="Акробатика"
-                    stateKey="acrobatics"
-                />
-                <InputCheckbox
-                    label="Ловкость рук"
-                    stateKey="sleightOfHand"
-                />
-                <InputCheckbox
-                    label="Скрытность"
-                    stateKey="stealth"
-                />
-                <Form.Row>
-                    <InputNumber
-                        label="Телосожение"
-                        stateKey="construction"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по телосложению"
-                    stateKey="constructionSave"
-                />
-                <Form.Row>
-                    <InputNumber
-                        label="Интеллект"
-                        stateKey="intelligence"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по интелекту"
-                    stateKey="intelligenceSave"
-                />
-                <InputCheckbox
-                    label="Анализ"
-                    stateKey="investigation"
-                />
-                <InputCheckbox
-                    label="История"
-                    stateKey="history"
-                />
-                <InputCheckbox
-                    label="Магия"
-                    stateKey="arcana"
-                />
-                <InputCheckbox
-                    label="Природа"
-                    stateKey="nature"
-                />
-                <InputCheckbox
-                    label="Религия"
-                    stateKey="religion"
-                />
-                <Form.Row>
-                    <InputNumber
-                        label="Мудрость"
-                        stateKey="wisdom"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по мудрости"
-                    stateKey="wisdomSave"
-                />
-                <InputCheckbox
-                    label="Внимательность"
-                    stateKey="perception"
-                />
-                <InputCheckbox
-                    label="Выживание"
-                    stateKey="survival"
-                />
-                <InputCheckbox
-                    label="Медицина"
-                    stateKey="medicine"
-                />
-                <InputCheckbox
-                    label="Проницательность"
-                    stateKey="insight"
-                />
-                <InputCheckbox
-                    label="Уход за животными"
-                    stateKey="animalHandling"
-                />
-                <Form.Row>
-                    <InputNumber
-                        label="Харизма"
-                        stateKey="charisma"
-                    />
-                </Form.Row>
-                <InputCheckbox
-                    label="Спасбросок по харизме"
-                    stateKey="charismaSave"
-                />
-                <InputCheckbox
-                    label="Выступление"
-                    stateKey="performance"
-                />
-                <InputCheckbox
-                    label="Запугивание"
-                    stateKey="intimidation"
-                />
-                <InputCheckbox
-                    label="Обман"
-                    stateKey="deception"
-                />
-                <InputCheckbox
-                    label="Убеждение"
-                    stateKey="persuasion"
-                />
+
+                <CardGroup>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Сила"
+                                stateKey="strength"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по силе"
+                            stateKey="strengthSave"
+                        />
+                        <InputCheckbox
+                            label="Атлетика"
+                            stateKey="athletics"
+                        />
+                    </Card>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Ловкость"
+                                stateKey="dexterity"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по ловкости"
+                            stateKey="dexteritySave"
+                        />
+                        <InputCheckbox
+                            label="Акробатика"
+                            stateKey="acrobatics"
+                        />
+                        <InputCheckbox
+                            label="Ловкость рук"
+                            stateKey="sleightOfHand"
+                        />
+                        <InputCheckbox
+                            label="Скрытность"
+                            stateKey="stealth"
+                        />
+                    </Card>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Телосожение"
+                                stateKey="construction"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по телосложению"
+                            stateKey="constructionSave"
+                        />
+                    </Card>
+                </CardGroup>
+
+                <CardGroup>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Интеллект"
+                                stateKey="intelligence"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по интелекту"
+                            stateKey="intelligenceSave"
+                        />
+                        <InputCheckbox
+                            label="Анализ"
+                            stateKey="investigation"
+                        />
+                        <InputCheckbox
+                            label="История"
+                            stateKey="history"
+                        />
+                        <InputCheckbox
+                            label="Магия"
+                            stateKey="arcana"
+                        />
+                        <InputCheckbox
+                            label="Природа"
+                            stateKey="nature"
+                        />
+                        <InputCheckbox
+                            label="Религия"
+                            stateKey="religion"
+                        />
+                    </Card>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Мудрость"
+                                stateKey="wisdom"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по мудрости"
+                            stateKey="wisdomSave"
+                        />
+                        <InputCheckbox
+                            label="Внимательность"
+                            stateKey="perception"
+                        />
+                        <InputCheckbox
+                            label="Выживание"
+                            stateKey="survival"
+                        />
+                        <InputCheckbox
+                            label="Медицина"
+                            stateKey="medicine"
+                        />
+                        <InputCheckbox
+                            label="Проницательность"
+                            stateKey="insight"
+                        />
+                        <InputCheckbox
+                            label="Уход за животными"
+                            stateKey="animalHandling"
+                        />
+                    </Card>
+                    <Card border="light">
+                        <Card.Title>
+                            <InputNumber
+                                label="Харизма"
+                                stateKey="charisma"
+                            />
+                        </Card.Title>
+                        <InputCheckbox
+                            label="Спасбросок по харизме"
+                            stateKey="charismaSave"
+                        />
+                        <InputCheckbox
+                            label="Выступление"
+                            stateKey="performance"
+                        />
+                        <InputCheckbox
+                            label="Запугивание"
+                            stateKey="intimidation"
+                        />
+                        <InputCheckbox
+                            label="Обман"
+                            stateKey="deception"
+                        />
+                        <InputCheckbox
+                            label="Убеждение"
+                            stateKey="persuasion"
+                        />
+                    </Card>
+                </CardGroup>
+
             </Form>
         )
     }

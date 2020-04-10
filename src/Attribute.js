@@ -14,9 +14,9 @@ class Attribute extends Component {
 
         return (
             <Card style={{ width: '20rem' }}>
-                <Card.Header as="h4">{this.props.label} {paramValue}</Card.Header>
+                <Card.Header as="h5">{this.props.label} {paramValue}</Card.Header>
                 <Card.Body>
-                    <Card.Title as="h5"> Мoдификатор: {mod}</Card.Title>
+                    <Card.Title as="h6"> Мoдификатор: {mod}</Card.Title>
                     <ListGroup>
                         <ListGroupItem>
                             <Form.Check
