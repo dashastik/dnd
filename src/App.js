@@ -1,10 +1,20 @@
 import React from 'react';
-import Form from './Form';
-
+import FormCharacter from './FormCharacter';
+import CardCharacter from './CardCharacter'
+import { Container, Tabs, Tab } from 'react-bootstrap';
 
 function App() {
   return (
-    <Form/>
+    <Container>
+        <Tabs defaultActiveKey="form">
+          <Tab eventKey="form" title="Форма для заполнения">
+          <FormCharacter />
+          </Tab>
+          <Tab eventKey="card" title="Карточка персонажа">
+            <CardCharacter />
+          </Tab>
+        </Tabs>
+    </Container>
   );
 }
 

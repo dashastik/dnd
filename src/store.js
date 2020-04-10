@@ -1,6 +1,6 @@
 import character from './reducer';
 import { createStore } from 'redux';
 
-const store = createStore(character)
+const store = createStore(character, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 export default store;

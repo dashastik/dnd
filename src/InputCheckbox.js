@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import changeCharacter from './action';
+import { Form } from 'react-bootstrap';
 
 class InputCheckbox extends Component {
 
@@ -11,16 +12,14 @@ class InputCheckbox extends Component {
 
     render() {
         return (
-            <div>
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={this.props.store[this.props.stateKey]}
-                        onChange={this.handleChange}
-                    />
-                    {this.props.label}
-                </label>
-            </div>
+            <Form.Group>
+                <Form.Check
+                    label={this.props.label}
+                    type="checkbox"
+                    checked={this.props.store[this.props.stateKey]}
+                    onChange={this.handleChange}
+                />
+            </Form.Group>
         )
     }
 }
