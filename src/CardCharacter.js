@@ -38,7 +38,7 @@ class CardCharacter extends Component {
                                 Мировоззрение: {this.props.ideology}
                             </ListGroupItem>
                             <ListGroupItem style={{ width: '20vw' }}>
-                                Бонус мастерства: {this.props.masteryBonus}
+                                Бонус мастерства: {this.props.masteryBonus + this.props.modifierMasteryBonus}
                             </ListGroupItem>
                         </ListGroup>
                     </Card.Body>
