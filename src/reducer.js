@@ -43,6 +43,7 @@ const initState = {
     intimidation: false,
     deception: false,
     persuasion: false,
+    modifierMasteryBonus: 0
 }
 
 const character = (state = initState, action) => {
