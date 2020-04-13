@@ -15,6 +15,7 @@ class InputText extends Component {
             <Form.Group >
                 <Form.Label>{this.props.label}</Form.Label>
                 <Form.Control
+                    style={{ width: '95%' }}
                     type="text"
                     placeholder="Введите текст"
                     value={this.props.store[this.props.stateKey]}

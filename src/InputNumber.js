@@ -15,12 +15,20 @@ class InputNumber extends Component {
             <Form.Group>
                 <Form.Label>{this.props.label}</Form.Label>
                 <Form.Control
+                    style={{ width: '95%' }}
                     type="number"
                     min="0"
                     placeholder="Введите число"
                     value={this.props.store[this.props.stateKey]}
-                    onChange={this.handleChange}
+                    // onChange={this.handleChange}
+                    readOnly
                 />
+                <Form.Control
+                    style={{ width: '95%' }}
+                    type="range"
+                    value={this.props.store[this.props.stateKey]}
+                    onChange={this.handleChange}
+                    max="30" />
             </Form.Group>
         )
     }
