@@ -11,7 +11,9 @@ class InputNumber extends Component {
         this.props.dispatch(levelAction)
 
         let modifierMasteryBonus = 0
-        if (levelValue < 5) {
+        if (levelValue < 1) {
+            modifierMasteryBonus = 0
+        } else if (levelValue < 5) {
             modifierMasteryBonus = 2
         } else if (levelValue < 9) {
             modifierMasteryBonus = 3
