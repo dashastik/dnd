@@ -13,16 +13,7 @@ class InputNumber extends Component {
     render() {
         return (
             <Form.Group>
-                <Form.Label>{this.props.label}</Form.Label>
-                <Form.Control
-                    style={{ width: '95%' }}
-                    type="number"
-                    min="0"
-                    placeholder="Введите число"
-                    value={this.props.store[this.props.stateKey]}
-                    // onChange={this.handleChange}
-                    readOnly
-                />
+                <Form.Label>{this.props.label + ": " + this.props.store[this.props.stateKey] }</Form.Label>
                 <Form.Control
                     style={{ width: '95%' }}
                     type="range"
