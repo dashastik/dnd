@@ -43,14 +43,41 @@ const initState = {
     intimidation: false,
     deception: false,
     persuasion: false,
-    modifierMasteryBonus: 0
+    modifierMasteryBonus: 0,
+
+    inventory: [
+
+    ]
 }
 
 const character = (state = initState, action) => {
     if (action.type === "CHANGE") {
         return { ...state, [action.key]: action.value }
     }
+    else if (action.type === "ADD_INVENTORY_ITEM") {
+        const item = { id: action.id, text: action.text }
+        return { ...state, inventory: [...state.inventory, item] }
+    }
+    else if (action.type === "DELETE_INVENTORY_ITEM") {
+        const id = action.id
+        return {
+            ...state, inventory: state.inventory.filter((item) => {
+                return item.id !== id
+            })
+        }
+    }
+    else if (action.type === "CHANGE_INVENTORY_ITEM") {
+        const text = action.text
+        const id = action.id
+        return {...state, inventory: state.inventory.map((item) => {
+            if (item.id === id) {
+                item.text = text
+            }
+            return item
+        })}
+    }
     return state
 }
+
 
 export default character;
