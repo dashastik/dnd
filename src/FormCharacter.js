@@ -4,6 +4,7 @@ import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
 import { Form, Card, CardGroup } from 'react-bootstrap';
 import Lavel from './Lavel';
+import Inventory from './Inventory';
 
 class FormCharacter extends Component {
     render() {
@@ -190,6 +191,7 @@ class FormCharacter extends Component {
                         />
                     </Card>
                 </CardGroup>
+                <Inventory/>
 
             </Form>
         )
