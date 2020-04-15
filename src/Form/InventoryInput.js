@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { InputGroup, Button, FormControl } from 'react-bootstrap';
-import { deleteInventoryItem, changeInventoryItem } from './action';
+import { deleteInventoryItem, changeInventoryItem } from '../action';
 import { connect } from 'react-redux';
 
 class InventoryInput extends Component {

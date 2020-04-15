@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import changeCharacter from './action';
+import changeCharacter from '../action';
 import { Form } from 'react-bootstrap';
 
-class InputText extends Component {
+class InputNumber extends Component {
 
     handleChange = e => {
-        const action = changeCharacter(this.props.stateKey, e.target.value)
+        const action = changeCharacter(this.props.stateKey, Number(e.target.value))
         this.props.dispatch(action)
     }
 
     render() {
         return (
-            <Form.Group >
-                <Form.Label>{this.props.label}</Form.Label>
+            <Form.Group>
+                <Form.Label>{this.props.label + ": " + this.props.store[this.props.stateKey] }</Form.Label>
                 <Form.Control
                     style={{ width: '95%' }}
-                    type="text"
-                    placeholder="Введите текст"
+                    type="range"
                     value={this.props.store[this.props.stateKey]}
                     onChange={this.handleChange}
-                />
+                    max="30" />
             </Form.Group>
         )
     }
@@ -30,4 +29,4 @@ const mapStateToProps = (state) => {
     return { store: state }
 }
 
-export default connect(mapStateToProps)(InputText);
+export default connect(mapStateToProps)(InputNumber);

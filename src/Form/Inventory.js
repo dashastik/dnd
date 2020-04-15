@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button, ListGroup } from 'react-bootstrap';
 import InventoryInput from './InventoryInput';
 import { connect } from 'react-redux';
-import {addInventoryItem} from './action';
+import {addInventoryItem} from '../action';
 
 
 class Inventory extends Component {

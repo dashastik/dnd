@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import changeCharacter from './action';
+import changeCharacter from '../action';
 import { Form } from 'react-bootstrap';
 
-class InputNumber extends Component {
+class Level extends Component {
 
     handleChange = e => {
         const levelValue = Number(e.target.value)
@@ -47,4 +47,4 @@ const mapStateToProps = (state) => {
     return { store: state }
 }
 
-export default connect(mapStateToProps)(InputNumber);
+export default connect(mapStateToProps)(Level);

@@ -3,7 +3,7 @@ import InputText from './InputText';
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
 import { Form, Card, CardGroup } from 'react-bootstrap';
-import Lavel from './Lavel';
+import Level from './Level';
 import Inventory from './Inventory';
 
 class FormCharacter extends Component {
@@ -35,7 +35,7 @@ class FormCharacter extends Component {
                         label="Мировоззрение"
                         stateKey="ideology"
                     />
-                    <Lavel />
+                    <Level />
                     <InputNumber
                         label="Бонус мастерства"
                         stateKey="masteryBonus"

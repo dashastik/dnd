@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import changeCharacter from './action';
+import changeCharacter from '../action';
 import { Form } from 'react-bootstrap';
 
 class InputCheckbox extends Component {

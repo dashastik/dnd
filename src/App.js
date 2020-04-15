@@ -1,6 +1,6 @@
 import React from 'react';
-import FormCharacter from './FormCharacter';
-import CardCharacter from './CardCharacter'
+import FormCharacter from './Form';
+import CardCharacter from './Card'
 import { Container, Tabs, Tab } from 'react-bootstrap';
 
 function App() {
