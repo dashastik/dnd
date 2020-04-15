@@ -2,15 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Attribute from './Attribute';
 import { Card, ListGroupItem, ListGroup, CardGroup } from "react-bootstrap";
-import { } from "react-bootstrap";
 
 class CardCharacter extends Component {
 
     render() {
+        const inventory = this.props.inventory
         return (
             <div>
-
-
 
                 <Card >
                     <Card.Header as="h5">Имя персонажа: {this.props.characterName}</Card.Header>
@@ -107,6 +105,14 @@ class CardCharacter extends Component {
                         ]}
                     />
                 </CardGroup>
+                <Card>
+                    <Card.Header>Инвентарь</Card.Header>
+                    <Card.Body>
+                        {inventory.map((item) =>{
+                            return  <ListGroupItem>{item.text}</ListGroupItem>
+                        })}
+                    </Card.Body>
+                </Card>
 
 
             </div>
