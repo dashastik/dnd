@@ -1,19 +1,18 @@
 import React from 'react';
-import FormCharacter from './Form';
-import CardCharacter from './Card'
-import { Container, Tabs, Tab } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
+import Main from './Main';
+import Header from './Header';
+import Navigation from './Navigation';
+import { Row } from 'react-bootstrap';
 
 function App() {
   return (
     <Container>
-        <Tabs defaultActiveKey="form">
-          <Tab eventKey="form" title="Форма для заполнения">
-          <FormCharacter />
-          </Tab>
-          <Tab eventKey="card" title="Карточка персонажа">
-            <CardCharacter />
-          </Tab>
-        </Tabs>
+      <Header />
+      <Row>
+        <Col sm={3}> <Navigation /> </Col>
+        <Col sm={9}> <Main /> </Col>
+      </Row>
     </Container>
   );
 }

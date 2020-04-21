@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
+import { NavLink } from 'react-router-dom';
 
 class Strength extends Component {
     render() {
@@ -23,6 +24,7 @@ class Strength extends Component {
                         label="Атлетика"
                         stateKey="athletics"
                     />
+                    <Button variant="secondary" style={{ float: 'right' }} as={NavLink} to="/dexterity">Далее</Button>
                 </Card.Body>
             </Card>
         )

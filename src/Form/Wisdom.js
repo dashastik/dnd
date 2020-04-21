@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { NavLink } from 'react-router-dom';
 
 class Wisdom extends Component {
     render() {
@@ -38,6 +39,7 @@ class Wisdom extends Component {
                         label="Уход за животными"
                         stateKey="animalHandling"
                     />
+                <Button variant="secondary"  style={{ float: 'right' }} as={NavLink} to="/charisma">Далее</Button>
                 </Card.Body>
             </Card>
         )

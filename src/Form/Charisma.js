@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import InputNumber from './InputNumber';
 import InputCheckbox from './InputCheckbox';
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { NavLink } from 'react-router-dom';
 
 class Charisma extends Component {
     render() {
@@ -34,6 +35,7 @@ class Charisma extends Component {
                     label="Убеждение"
                     stateKey="persuasion"
                 />
+                    <Button variant="secondary" style={{ float: 'right' }} as={NavLink} to="/inventory">Далее</Button>
                 </Card.Body>
             </Card>
         )

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import InputText from './InputText';
 import InputNumber from './InputNumber';
 import Level from './Level';
-import { Card } from "react-bootstrap";
-
+import { Card, Button } from "react-bootstrap";
+import { NavLink } from 'react-router-dom';
 
 class Description extends Component {
     render() {
@@ -40,6 +40,7 @@ class Description extends Component {
                         label="Бонус мастерства"
                         stateKey="masteryBonus"
                     />
+                <Button variant="secondary"  style={{ float: 'right' }} as={NavLink} to="/strength">Далее</Button>
                 </Card.Body>
             </Card>
         )
